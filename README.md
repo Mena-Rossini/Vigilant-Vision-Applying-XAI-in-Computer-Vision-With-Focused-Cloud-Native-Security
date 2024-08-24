@@ -1,8 +1,8 @@
 # Vigilant-Vision-Applying-XAI-in-Computer-Vision-With-Focused-Cloud-Native-Security
+
 Welcome to the repository for integrating ethical AI practices in computer vision using cloud-native technologies. This repository provides a comprehensive guide to setting up, training, deploying, and managing a computer vision model using Kubernetes and other cloud-native tools.
 
 ## Table of Contents
-
 1. [Setup and Data Preparation](#setup-and-data-preparation)
 2. [Model Training and Deployment](#model-training-and-deployment)
 3. [Explainable AI (XAI)](#explainable-ai-xai)
@@ -17,7 +17,6 @@ Welcome to the repository for integrating ethical AI practices in computer visio
 ### Prerequisites
 
 Before you start, ensure you have the following installed:
-
 - Docker
 - Kubernetes and `kubectl`
 - Minikube (for local Kubernetes)
@@ -25,7 +24,8 @@ Before you start, ensure you have the following installed:
 - Prometheus and Grafana (for monitoring)
 - Argo CD (for CI/CD)
 
-### Setup Environment:
+### Setup Environment
+
 1. **Create a Kubernetes Cluster**:
     ```bash
     minikube start
@@ -89,6 +89,7 @@ model.compile(optimizer='adam', loss='categorical_crossentropy', metrics=['accur
 # Train model
 model.fit(x_train, y_train, epochs=10, validation_data=(x_test, y_test))
 model.save('cifar10_model.h5')
+```
 
 ### 2.2 Containerize the Model
 
@@ -306,5 +307,6 @@ kubectl apply -f argo-cd-application.yaml
 5. **Fairness and Privacy**: Use modern tools and techniques to ensure fairness and privacy.
 6. **Monitoring**: Set up Prometheus and Grafana for monitoring.
 7. **CI/CD**: Use Argo CD to automate deployment.
+
 
 This setup provides hands-on experience with integrating cloud-native technologies and applying responsible AI practices to computer vision tasks.
